@@ -4,6 +4,8 @@ sequenceDiagram
     participant browser
     participant server
 
+    Note: The user submits the form with text for a new note.
+
     browser->>server: POST https://fullstack-exampleapp.herokuapp.com/new_note
     activate server
     server->>browser: HTTP Status Code 302 
@@ -29,8 +31,7 @@ sequenceDiagram
     activate server
     server-->>browser: the JavaScript file
     deactivate server
-
-    Note right of browser: The browser starts executing the JavaScript code that fetches the JSON from the server
+    Note right of browser: The browser re-renders the JavaScript code that fetches the JSON from the server
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server
