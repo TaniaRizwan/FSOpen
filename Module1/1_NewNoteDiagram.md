@@ -4,7 +4,7 @@ sequenceDiagram
     participant browser
     participant server
 
-    Note: The user submits the form with text for a new note.
+    Note right of browser: The user submits the form with text for a new note.
 
     browser->>server: POST https://fullstack-exampleapp.herokuapp.com/new_note
     activate server
